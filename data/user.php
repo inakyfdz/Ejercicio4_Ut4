@@ -16,7 +16,7 @@ return [
         "name" => "Jane Doe",
         "email" => "janeDoe@gmail.com",
         "password" => '$2y$12$gRdqrjP4xhNjQ9D0jnn.N.bTAzXjxlzUFUWkQLHeQq6E0RsfSv9Ci',
-        "role" => "usser"
+        "role" => "agent"
     ]
 ];
 

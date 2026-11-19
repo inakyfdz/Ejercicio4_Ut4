@@ -39,7 +39,9 @@ function logOut(){
     header("location: /index.php");
     exit;
 }
-
+function isLoggedIn(){
+    return isset($_SESSION["user"]) && is_array($_SESSION["user"]);
+}
 function currentUser () :?array {
     if(!isLoggedIn()) {
         return null;
