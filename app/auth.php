@@ -16,7 +16,7 @@ function getInfoByEmail(string $email){
 
 function login(string $email, string $password){
     $user = getInfoByEmail($email);
-    if(!password_verify($password, $user['password']) || $user === null){
+    if($user === null  || !password_verify($password, $user['password']) ){
        http_response_code(401);
        echo "<p> Error de autentificacion </p>";
     }else{

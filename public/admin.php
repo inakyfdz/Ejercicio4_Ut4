@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . "/../app/bootstrap.php";
+
 if(isAutenticated() && currentUserRole() === "admin"){
     $sitio = "dashboard";
     $datos = [

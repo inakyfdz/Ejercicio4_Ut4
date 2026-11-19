@@ -1,7 +1,15 @@
 <?php
 
+session_set_cookie_params([
+    "path" => "/",
+    'secure' => requestHTTPS(),
+    'samesite' => 'Laxe',
+    'httponly' => true
+]);
+
 session_start();
-if(emty($_SESSION['CSRF'])){
+
+if(empty($_SESSION['CSRF'])){
     $_SESSION['CSRF']= bin2hex(random_bytes(32));
 }
 function sanitary ($sanitary) {
@@ -20,3 +28,7 @@ function isAutenticated() {
     return true;
 }
 
+function validateCSRFToken(string $token): bool {
+    return isset($_SESSION['CSRF'])
+        && hash_equals($_SESSION['CSRF'], $token);
+}
