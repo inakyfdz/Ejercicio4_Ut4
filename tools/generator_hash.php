@@ -7,4 +7,4 @@ if(!is_string($password) || $password === ""){
     exit(1);
 }
 $hash = password_hash($password, PASSWORD_DEFAULT);
-echo $hash . PHP_EOL;
+echo $hash . PHP_EOL   ;

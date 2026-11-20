@@ -8,11 +8,11 @@
 <body>
 <h1> <?= sanitary($cabecera1) ?></h1>
 <header>
-    <a href="/public/index.php"><button>Index</button></a> <a href="/public/login.php"><button>Login</button></a>
+    <a href="/index.php"><button>Index</button></a> <a href="/login.php"><button>Login</button></a>
     <?php if(isLoggedIn()) {
-        echo "<a href='../../public/dashboard.php'><button>Dasboard</button></a>";
-        echo "<a href='../../public/logOut.php'><button>logOut</button></a>";
+        echo "<a href='/dashboard.php'><button>Dasboard</button></a>";
+        echo "<a href='/logOut.php'><button>logOut</button></a>";
         if(currentUserRole() === "admin"){
-            echo "<a href='../../public/admin.php'><button>Admin</button></a>";}}
+            echo "<a href='/admin.php'><button>Admin</button></a>";}}
     ?>
 </header>

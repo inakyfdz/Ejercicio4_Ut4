@@ -3,7 +3,7 @@
 session_set_cookie_params([
     "path" => "/",
     'secure' => requestHTTPS(),
-    'samesite' => 'Laxe',
+    'samesite' => 'Lax',
     'httponly' => true
 ]);
 
@@ -29,6 +29,5 @@ function isAutenticated() {
 }
 
 function validateCSRFToken(string $token): bool {
-    return isset($_SESSION['CSRF'])
-        && hash_equals($_SESSION['CSRF'], $token);
+    return isset($_SESSION['CSRF']) && hash_equals($_SESSION['CSRF'], $token);
 }

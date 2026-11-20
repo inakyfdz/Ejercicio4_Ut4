@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../app/bootstrap.php";
 if(isAutenticated()){
-    $sitio = "dashboard";
+    $sitio = "dashboardView";
     $datos = [
         'titulo' => $sitio,
         'cabecera1' => 'Te encuentras en el Dashboard',

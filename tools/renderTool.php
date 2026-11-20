@@ -27,7 +27,8 @@ function renderTool( string $sitio, array $datos)
 
 function searchInView(string $sitio){
     $raiz = dirname(__DIR__);
-    $ruta = $raiz."/views".$sitio."php";
+    $ruta = $raiz."/views/".$sitio.".php";
+
     if(file_exists($ruta) && is_file($ruta)){
         return $ruta;
     }
